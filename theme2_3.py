@@ -12,7 +12,7 @@ X, y = make_classification(
     n_informative=4,
     n_redundant=0,
     random_state=42,
-    weights=[0.6, 0.4]  # трохи незбалансований клас
+    weights=[0.6, 0.4],  # трохи незбалансований клас
 )
 
 # Розбиття на train/test

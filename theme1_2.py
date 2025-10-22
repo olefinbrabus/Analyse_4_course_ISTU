@@ -10,7 +10,7 @@ data = {
     "Area": [55, 68, 75, 80, 95, 110, 125, 140, 160, 180],
     "Rooms": [2, 2, 3, 3, 3, 4, 4, 5, 5, 6],
     "Floor": [1, 2, 2, 3, 3, 4, 4, 5, 5, 6],
-    "Price": [60, 70, 80, 85, 100, 120, 135, 150, 170, 200]
+    "Price": [60, 70, 80, 85, 100, 120, 135, 150, 170, 200],
 }
 df = pd.DataFrame(data)
 
@@ -35,8 +35,10 @@ print("R^2 (коефіцієнт детермінації):", r2_score(y, y_pred
 print("RMSE (середньоквадратична помилка):", np.sqrt(mean_squared_error(y, y_pred)))
 
 # Графічна візуалізація залежності площі та ціни
-plt.figure(figsize=(10,6))
-sns.scatterplot(x="Area", y="Price", size="Rooms", hue="Floor", palette="viridis", data=df, s=150)
+plt.figure(figsize=(10, 6))
+sns.scatterplot(
+    x="Area", y="Price", size="Rooms", hue="Floor", palette="viridis", data=df, s=150
+)
 plt.plot(df["Area"], y_pred, color="red", linewidth=2, label="Лінія регресії")
 plt.title("Лінійна регресія: ціна залежно від площі, кількості кімнат та поверху")
 plt.xlabel("Площа (м²)")
