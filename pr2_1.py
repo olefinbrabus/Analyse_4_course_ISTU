@@ -287,9 +287,6 @@ def main() -> None:
     df.to_csv("startup_data_services_300.csv", index=False)
     print("saved: startup_data_services_300.csv")
 
-    # приклади запитань
-    print(EXAMPLE_QUESTIONS)
-
     # аналітика
     out = analytics(df)
 
